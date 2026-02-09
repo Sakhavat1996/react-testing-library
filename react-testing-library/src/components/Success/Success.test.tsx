@@ -3,6 +3,6 @@ import Success from ".";
 import { expect, test } from "vitest";
 
 test("renders succdess text", () => {
-  render(<Success country="USAb" />);
+  render(<Success country="USA51" />);
   expect(screen.getByText(/USA/i)).toBeInTheDocument();
 });
