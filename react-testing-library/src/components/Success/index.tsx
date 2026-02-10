@@ -3,5 +3,5 @@ interface SuccessProps {
 }
 
 export default function Success(props: SuccessProps) {
-  return <div>Success , {props.country}</div>;
+  return <div>Success , {props.country ? props?.country : "Country"}</div>;
 }
