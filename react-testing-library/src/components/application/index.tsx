@@ -2,18 +2,26 @@ export const Application = () => {
   return (
     <>
       <h1>Job Application Form</h1>
+      <div>React Test Library</div>
       <h2>heading2</h2>
+      <span title="heading-title-element">Span Element</span>
+      <img src="" alt="person library" />
       <form>
         <div>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Ad daxil edin"
+            value={"Gojayev"}
+          />
         </div>
         <div>
           <label htmlFor="textarea">Name2</label>
-          <textarea id="textarea" />
+          <textarea id="textarea" value="  sakhavat    " />
         </div>
         <div>
-          <label htmlFor="">Job Location</label>
+          <label htmlFor="job-location">Name</label>
           <select name="" id="job-location">
             <option value="">Select Country</option>
             <option value="usa">USA</option>

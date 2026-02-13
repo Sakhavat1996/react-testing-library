@@ -18,6 +18,39 @@ describe("Application", () => {
     });
     expect(sectionHeading).toBeInTheDocument();
 
+    const labelElement = screen.getByLabelText("Name2");
+    expect(labelElement).toBeInTheDocument();
+
+    const labelElement2 = screen.getByLabelText(
+      "I agree to the terms and conditions",
+    );
+    expect(labelElement2).toBeInTheDocument();
+
+    const nameLabelElement = screen.getByLabelText("Name", {
+      selector: "select",
+    });
+    expect(nameLabelElement).toBeInTheDocument();
+
+    const inputPlaceholderElement =
+      screen.getByPlaceholderText("Ad daxil edin");
+    expect(inputPlaceholderElement).toBeInTheDocument();
+
+    const getByTextElement = screen.getByText("React Test Library", {
+      selector: "div",
+    });
+    expect(getByTextElement).toBeInTheDocument();
+
+    const valueElement = screen.getByDisplayValue("sakhavat", {
+      trim: true,
+    });
+    expect(valueElement).toBeInTheDocument();
+
+    const altElement = screen.getByAltText("person library");
+    expect(altElement).toBeInTheDocument();
+
+    const titleElement = screen.getByTitle("heading-title-element");
+    expect(titleElement).toBeInTheDocument();
+
     const nameElement = screen.getByRole("textbox", { name: "Name" });
     expect(nameElement).toBeInTheDocument();
 
