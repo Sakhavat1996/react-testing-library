@@ -2,10 +2,12 @@ export const Application = () => {
   return (
     <>
       <h1>Job Application Form</h1>
-      <div>React Test Library</div>
+      <div>REACT TEST LIBRARY</div>
       <h2>heading2</h2>
       <span title="heading-title-element">Span Element</span>
       <img src="" alt="person library" />
+      <div data-testid="custom-element">Custom Element</div>
+      <div data-testid="custom-element">Custom Element</div>
       <form>
         <div>
           <label htmlFor="name">Name</label>

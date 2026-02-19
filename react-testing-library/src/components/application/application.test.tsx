@@ -35,9 +35,10 @@ describe("Application", () => {
       screen.getByPlaceholderText("Ad daxil edin");
     expect(inputPlaceholderElement).toBeInTheDocument();
 
-    const getByTextElement = screen.getByText("React Test Library", {
-      selector: "div",
-    });
+    // const getByTextElement = screen.getByText("React Test Library", {
+    //   selector: "div",
+    // });
+    const getByTextElement = screen.getByText(/^react test library$/i);
     expect(getByTextElement).toBeInTheDocument();
 
     const valueElement = screen.getByDisplayValue("sakhavat", {
@@ -50,6 +51,9 @@ describe("Application", () => {
 
     const titleElement = screen.getByTitle("heading-title-element");
     expect(titleElement).toBeInTheDocument();
+
+    const testIDElement = screen.getAllByTestId("custom-element");
+    expect(testIDElement).toHaveLength(2);
 
     const nameElement = screen.getByRole("textbox", { name: "Name" });
     expect(nameElement).toBeInTheDocument();
